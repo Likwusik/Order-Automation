@@ -23,7 +23,7 @@ You need to create an application that filters entries in a certain object based
 > <details>
 > <summary>Test data was created using execute anonymous Apex in the Developer Console.</summary>
 
-```
+
 // Create Accounts
 List<Account> accounts = new List<Account>();
 for(Integer i = 1; i <= 5; i++) {
@@ -44,5 +44,6 @@ for(Integer i = 0; i < 40; i++) {
 }
 insert orders;
 System.debug('Inserted Orders: ' + orders);
-```
+
 </details>
+
