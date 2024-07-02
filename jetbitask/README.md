@@ -1,18 +1,20 @@
-# Salesforce DX Project: Next Steps
+# Task description
+You need to create an application that filters entries in a certain object based on two related criteria. In addition to the application, you need to automate the sending of an email directly from the record interface.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Steps to complete the task
 
-## How Do You Plan to Deploy Your Changes?
+# **Step 1. - _Data model:_**
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+**1.** - [x] Create Custom object: *Order__c* with custom fields:
 
-## Configure Your Salesforce DX Project
+- [x] Total Amount (num, required)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- [x] Payment Due date (date, required)
 
-## Read All About It
+- [x] Account (lookup)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+**2.**  Create test data for Account and Order objects
+
+- Account - 5 records
+
+- Order - 40 records (Records must be evenly distributed on Accounts.  Payment Due Date must be different for records)
