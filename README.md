@@ -16,7 +16,7 @@ You need to create an application that filters entries in a certain object based
 
 - [x] Create custom field: Account (lookup)
 
-**2.**  Create test data for Account and Order objects
+- [x] Create test data for Account and Order objects
 
 - Account - 5 records
 
