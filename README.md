@@ -1,10 +1,10 @@
-## Order-Automation
+# Order-Automation
 Exam Task for Salesforce Courses JETBI.
 
-# Task description
+## Task description
 You need to create an application that filters entries in a certain object based on two related criteria. In addition to the application, you need to automate the sending of an email directly from the record interface.
 
-# Steps to complete the task
+## Steps to complete the task
 
 **Step 1. - _Data model:_**
 
