@@ -24,26 +24,26 @@ You need to create an application that filters entries in a certain object based
 > <summary>Test data was created using execute anonymous Apex in the Developer Console.</summary>
 
 > ```
-// Create Accounts
-List<Account> accounts = new List<Account>();
-for(Integer i = 1; i <= 5; i++) {
-    accounts.add(new Account(Name = 'Test Account ' + i));
-}
-insert accounts;
-System.debug('Inserted Accounts: ' + accounts);
+>// Create Accounts
+>List<Account> accounts = new List<Account>();
+>for(Integer i = 1; i <= 5; i++) {
+ >   accounts.add(new Account(Name = 'Test Account ' + >i));
+>}
+>insert accounts;
+>System.debug('Inserted Accounts: ' + accounts);
 
-// Create Orders
-List<Order__c> orders = new List<Order__c>();
-for(Integer i = 0; i < 40; i++) {
-    Integer accountIndex = Math.mod(i, 5);
-    orders.add(new Order__c(
-        Total_Amount__c = (i + 1) * 10,
-        Payment_Due_Date__c = Date.today().addDays(i),
-        Account__c = accounts[accountIndex].Id
-    ));
-}
-insert orders;
-System.debug('Inserted Orders: ' + orders);
+>// Create Orders
+>List<Order__c> orders = new List<Order__c>();
+>for(Integer i = 0; i < 40; i++) {
+>    Integer accountIndex = Math.mod(i, 5);
+>    orders.add(new Order__c(
+>        Total_Amount__c = (i + 1) * 10,
+>        Payment_Due_Date__c = Date.today().addDays(i),
+>        Account__c = accounts[accountIndex].Id
+>    ));
+>}
+>insert orders;
+>System.debug('Inserted Orders: ' + orders);
 > ```
 
 > </details>
