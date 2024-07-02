@@ -8,7 +8,7 @@ You need to create an application that filters entries in a certain object based
 
 **Step 1. - _Data model:_**
 
-**1.** - [x] Create Custom object: *Order__c* with custom fields:
+1. [x] Create Custom object: *Order__c* with custom fields:
 
 - [x] Total Amount (num, required)
 
