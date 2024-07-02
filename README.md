@@ -5,13 +5,13 @@ You need to create an application that filters entries in a certain object based
 
 # **Step 1. - _Data model:_**
 
-- [x] Create Custom object: *Order__c* with custom fields:
+- [x] Create Custom object: Order
 
-- [x] Total Amount (num, required)
+- [x] Create custom field: Total Amount (num, required)
 
-- [x] Payment Due date (date, required)
+- [x] Create custom field: Payment Due date (date, required)
 
-- [x] Account (lookup)
+- [x] Create custom field: Account (lookup)
 
 - [x] Create test data for Account and Order objects:
 
@@ -50,4 +50,9 @@ System.debug('Inserted Orders: ' + orders);
 
 ```
 </details>
+
+
+
+
+
 
