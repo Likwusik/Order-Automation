@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Order Filter Component">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="account"
+                label="Select Account"
+                value={selectedAccount}
+                placeholder="-- Select Account --"
+                options={accounts}
+                onchange={handleAccountChange}>
+            </lightning-combobox>
+
+            <template if:true={months.length}> 
+                <lightning-combobox
+                    name="month"
+                    label="Select Month"
+                    value={selectedMonth}
+                    placeholder="-- Select a Month --"
+                    options={months}
+                    onchange={handleMonthChange}>
+                </lightning-combobox>
+            </template>
+
+            <template if:true={orders.length}>
+                <ul>
+                    <template for:each={orders} for:item="order">
+                        <li key={order.Id} data-id={order.Id} onclick={handleOrderClick}>
+                            <a href="javascript:void(0);" data-id={order.Id}>{order.Name}</a>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+</template>

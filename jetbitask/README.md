@@ -32,28 +32,31 @@ You need to create an application that filters entries in a certain object based
 <summary>Click to open the code</summary>
 
 ```
-// Create test data: Accounts
+// Create 5 Account records
 List<Account> accounts = new List<Account>();
-for(Integer i = 1; i <= 5; i++) {
+for (Integer i = 1; i <= 5; i++) {
     accounts.add(new Account(Name = 'Test Account ' + i));
 }
 insert accounts;
-// Check
-System.debug('Inserted Accounts: ' + accounts);
 
-// Create test data: Orders
+
+// Create 40 Order records with different Payment Due Dates and evenly distribute them across the 5 Accounts
 List<Order__c> orders = new List<Order__c>();
-for(Integer i = 0; i < 40; i++) {
-    Integer accountIndex = Math.mod(i, 5);
+Integer accountsSize = accounts.size();
+for (Integer i = 0; i < 40; i++) {
+    Integer accountIndex = Math.mod(i, accountsSize);
     orders.add(new Order__c(
-        Total_Amount__c = (i + 1) * 10,
+        Total_Amount__c = (i + 1) * 10, // Set Total_Amount__c to a dummy value
         Payment_Due_Date__c = Date.today().addDays(i),
         Account__c = accounts[accountIndex].Id
     ));
 }
 insert orders;
-// Check
+
+// Output the inserted data for verification
+System.debug('Inserted Accounts: ' + accounts);
 System.debug('Inserted Orders: ' + orders);
+
 
 ```
 </details>
