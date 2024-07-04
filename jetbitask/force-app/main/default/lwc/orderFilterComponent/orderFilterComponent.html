@@ -1,6 +1,7 @@
 <template>
     <lightning-card title="Order Filter Component">
         <div class="slds-m-around_medium">
+           <div class="slds-m-bottom_xx-large">
             <lightning-combobox
                 name="account"
                 label="Select Account"
@@ -11,7 +12,7 @@
             </lightning-combobox>
 
             <template if:true={months.length}> 
-                <lightning-combobox
+                <lightning-combobox 
                     name="month"
                     label="Select Month"
                     value={selectedMonth}
@@ -20,15 +21,11 @@
                     onchange={handleMonthChange}>
                 </lightning-combobox>
             </template>
-
+        </div>
             <template if:true={orders.length}>
-                <ul>
-                    <template for:each={orders} for:item="order">
-                        <li key={order.Id} data-id={order.Id} onclick={handleOrderClick}>
-                            <a href="javascript:void(0);" data-id={order.Id}>{order.Name}</a>
-                        </li>
-                    </template>
-                </ul>
+                <lightning-datatable columns={columns} data={orders} key-field="Id" hide-checkbox-column>
+
+                </lightning-datatable>
             </template>
         </div>
     </lightning-card>

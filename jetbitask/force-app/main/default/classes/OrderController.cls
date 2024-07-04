@@ -1,9 +1,8 @@
 public with sharing class OrderController {
    
-   // Get accounts with orders for the first picklist
+    // Get accounts with orders for the first picklist
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccountsWithOrders() {
-        
         List<Account> accounts;
         
         // Catching errors
@@ -29,8 +28,8 @@ public with sharing class OrderController {
         ];
         
         // Catching errors
-        if (orders.size() == 0) {
-            throw new AuraHandledException('There is no orders for this account');
+        if (orders.isEmpty()) {
+            throw new AuraHandledException('There are no orders for this account');
         }
 
         // Get the months
@@ -43,7 +42,6 @@ public with sharing class OrderController {
 
         return new List<Integer>(months);
     }
-
 
     // Get Orders by accountsID and month for orders list
     @AuraEnabled(cacheable=true)
