@@ -1,0 +1,21 @@
+<apex:page standardController="Order__c" extensions="EmailConfirmationController">
+    <apex:form >
+        <apex:pageBlock title="Send Order Information">
+            <apex:pageMessages />
+            
+            <p>Please confirm if you want to send an email with the order details:</p>
+            
+            <p>Customer Name: {!Order__c.Account__r.Name}</p>
+            <p>Payment Due Date: {!Order__c.Payment_Due_Date__c}</p>
+            <p>Total Sum: ${!Order__c.Total_Amount__c}</p>
+          
+            
+            <p><b>Do you want to send this email?</b></p>
+            
+            <p>
+                <apex:commandButton action="{!confirmSendEmail}" value="Send Email" styleClass="btn"/>
+                <apex:commandButton action="{!cancel}" value="Cancel" styleClass="btn"/>
+            </p>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
