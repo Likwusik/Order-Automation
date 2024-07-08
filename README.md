@@ -45,7 +45,7 @@ I need to create an application that filters entries in a certain object based o
 **Result Visualisation:**
 
  **1)** First picklist that contains the names of all records from the Account object that have one or more related Orders.
- <img src="images\first_picklist.jpg"/>
+ <img src="jetbitask\images\first_picklist.jpg"/>
  <img src="images\first_picklist1.jpg"/>
 
 **2)** Second picklist that contains names of all months of Payment Due Date records filtered by the first one.
