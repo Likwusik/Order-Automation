@@ -52,7 +52,7 @@ I need to create an application that filters entries in a certain object based o
 <img src="images\second_picklist.jpg"/>
 <img src="images\seond_picklist1.jpg"/>
 
-**3)** Order list with the chosen details. The records of the Order object displayed by the component are clickable
+**3)** Order list with the chosen details. The records of the Order object displayed by the component is clickable
 <img src="images\order_list.jpg"/>
 <img src="images\order_details.jpg"/>
 
