@@ -44,7 +44,8 @@ I need to create an application that filters entries in a certain object based o
 
 **Visualization of Result:**
 
-**1)** <img src="images/first_picklist.jpg"/>
+**1)** <img src="C:\Users\Lenovo\Desktop\Programowanie\Salesforce\Salesforce_training\Training\Order-Automation\jetbitask\images\first_picklist.jpg"/>
+
 
 **2)** SOQL queries
 
