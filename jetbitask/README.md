@@ -42,19 +42,26 @@ I need to create an application that filters entries in a certain object based o
 - [x] Create EmailConfirmationController to implement logic of email sending
 - [x] Test for EmailConfirmationController (test coverage: 88%, total: 84%)
 
-**Visualization of Result:**
+**Result Visualisation:**
 
-**1)** <img src="images/first_picklist.png" width="300"/>
+ **1)** First picklist that contains the names of all records from the Account object that have one or more related Orders.
+ <img src="images\first_picklist.jpg"/>
+ <img src="images\first_picklist1.jpg"/>
 
-**2)** SOQL queries
+**2)** Second picklist that contains names of all months of Payment Due Date records filtered by the first one.
+<img src="images\second_picklist.jpg"/>
+<img src="images\seond_picklist1.jpg"/>
 
-**3)** Unit test coverage: at least 80%
+**3)** Order list with the chosen details. The records of the Order object displayed by the component must are clickable
+<img src="images\order_list.jpg"/>
+<img src="images\order_details.jpg"/>
 
-**4)** Lightning application, Lightning web components
+**4)** Button “Send Order” on the Order object that sends an email to current User with Order details after confirmation
+<img src="images\button.jpg"/>
+<img src="images\confirmation.jpg"/>
 
-**5)** SObjectType, DescribeFieldResult и др.
-
-**6)** Email Template
+**5)** The email that contains information about payment due date, total sum, customer name and JetBI logo
+<img src="images\email.jpg"/>
 
 
 
