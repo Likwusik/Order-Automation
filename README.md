@@ -42,7 +42,7 @@ I need to create an application that filters entries in a certain object based o
 - [x] Create EmailConfirmationController to implement logic of email sending
 - [x] Test for EmailConfirmationController (test coverage: 88%, total: 84%)
 
-**Result Visualisation:**
+# Result Visualisation:
 
  **1)** First picklist that contains the names of all records from the Account object that have one or more related Orders.
  <img src="jetbitask\images\first_picklist.jpg"/>
