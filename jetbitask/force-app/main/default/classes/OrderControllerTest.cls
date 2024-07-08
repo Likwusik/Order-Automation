@@ -9,7 +9,7 @@ public class OrderControllerTest {
         Order__c testOrder = new Order__c(
             Account__c = testAccount.Id,
             Payment_Due_Date__c = Date.today(),
-            Total_Amount__c = 100.00 // Set the required Total_Amount__c field
+            Total_Amount__c = 100.00 
         );
         insert testOrder;
 
@@ -32,14 +32,14 @@ public class OrderControllerTest {
         Order__c testOrder1 = new Order__c(
             Account__c = testAccount.Id,
             Payment_Due_Date__c = Date.newInstance(2023, 1, 15),
-            Total_Amount__c = 100.00 // Set the required Total_Amount__c field
+            Total_Amount__c = 100.00 
         );
         insert testOrder1;
 
         Order__c testOrder2 = new Order__c(
             Account__c = testAccount.Id,
             Payment_Due_Date__c = Date.newInstance(2023, 2, 20),
-            Total_Amount__c = 200.00 // Set the required Total_Amount__c field
+            Total_Amount__c = 200.00 
         );
         insert testOrder2;
 

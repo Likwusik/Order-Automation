@@ -1,4 +1,4 @@
-public class EmailConfirmationController {
+public with sharing class EmailConfirmationController {
     
 	private ApexPages.StandardController stdController;
     private static String templateName = 'Order_Information_Email';
@@ -22,7 +22,7 @@ public class EmailConfirmationController {
             }
             return new PageReference('/' + order.Id);
         } else {
-            return null; // Handle cancelation or return to order
+            return null; 
         }
     }
 
@@ -34,9 +34,6 @@ public class EmailConfirmationController {
     // Private method to send email
     private void sendEmail() {
         EmailTemplate emailTemplate = getTemplate(templateName);
-        
-        // Create email message
-        //Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
         
         Messaging.SingleEmailMessage email = Messaging.renderStoredEmailTemplate(
             emailTemplate.Id,
@@ -52,7 +49,7 @@ public class EmailConfirmationController {
     }
     
     private static EmailTemplate getTemplate(String templateName) {
-        return [SELECT Id, Subject, HtmlValue FROM EmailTemplate WHERE DeveloperName =: templateName];
+        return [SELECT Id, Subject, HtmlValue FROM EmailTemplate WHERE DeveloperName =: templateName WITH SECURITY_ENFORCED];
     }
 
 

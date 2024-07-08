@@ -1,7 +1,8 @@
+<!-- sldsValidatorIgnore -->
 <template>
     <lightning-card title="Order Filter Component">
         <div class="slds-m-around_medium">
-           <div class="slds-m-bottom_xx-large">
+           <div class="slds-m-bottom_small">
             <lightning-combobox
                 name="account"
                 label="Select Account"
@@ -22,6 +23,7 @@
                 </lightning-combobox>
             </template>
         </div>
+        <!-- sldsValidatorIgnoreNextLine -->
             <template if:true={orders.length}>
                 <lightning-datatable columns={columns} data={orders} key-field="Id" hide-checkbox-column>
 
